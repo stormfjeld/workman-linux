@@ -1,0 +1,41 @@
+#+TITLE: Workman Keyboard Layout on Linux
+#+DESCRIPTION:This is how to use the Workman Keyboard Layout on Linux
+#+AUTHOR: Storm Fjeldstad
+
+* ARCH
+** AUR
+#+begin_src
+yay -S workman-git
+localectl set-keymap workman
+setxkbmap workman
+#+end_src
+** PKGBUILD
+#+begin_src
+makepkg -si
+#+end_src
+* MANUAL INSTALL
+*** From my Git Repo
+**** Linux Console
+#+begin_src
+sudo mkdir /usr/share/kbd/keymaps/i386/workman
+sudo cp workman.map /usr/share/kbd/keymaps/i386/workman/workman.map
+localectl set-keymap workman
+#+end_src
+**** Xorg
+#+begin_src
+sudo cp workman /usr/share/X11/xkb/symbols/workman
+setxkbmap workman
+#+end_src
+*** From the official Workman Repo
+#+begin_src
+git clone https://github.com/workman-layout/Workman.git
+cd Workman
+cd xorg
+sudo cp workman /usr/share/X11/xkb/symbols/workman
+cd ..
+cd linux_console/
+sudo mkdir /usr/share/kbd/keymaps/i386/workman
+sudo cp workman.iso15.kmap /usr/share/kbd/keymaps/i386/workman/workman.map
+setxkbmap workman
+localectl set-keymap workman
+#+end_src
