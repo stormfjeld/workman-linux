@@ -1,4 +1,3 @@
-# Maintainer: Justin Williams <justin@justinandyadi.com>
 pkgname=workman-git
 _gitname=Workman
 pkgver=107.7d3dcaa
