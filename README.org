@@ -9,10 +9,6 @@ yay -S workman-git
 localectl set-keymap workman (This last command is only for distros with systemd)
 setxkbmap workman
 #+end_src
-** PKGBUILD
-#+begin_src
-makepkg -si
-#+end_src
 * MANUAL INSTALL
 *** From my Git Repo
 **** Linux Console
